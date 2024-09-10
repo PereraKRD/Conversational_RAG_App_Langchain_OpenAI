@@ -1,2 +1,10 @@
 setuptools
 -e .
+fastapi
+uvicorn
+langchain
+langchain-openai
+langchain_community
+python-dotenv
+faiss-cpu
+pypdf
