@@ -5,6 +5,8 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.chat_history import BaseChatMessageHistory
 from fastapi.middleware.cors import CORSMiddleware
+from langchain.globals import set_llm_cache
+from langchain_community.cache import InMemoryCache
 from dotenv import load_dotenv
 from src.llm import rag_chain
 
@@ -18,6 +20,8 @@ class QueryModel(BaseModel):
     input: str
 
 app = FastAPI(redoc_url=None, docs_url=None)
+
+set_llm_cache(InMemoryCache())
 
 allowed_origins = [
     "*"

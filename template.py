@@ -3,9 +3,16 @@ import logging
 from pathlib import Path
 
 list_of_files = [
+    "src/__init__.py",
+    "src/helper.py",
+    "src/prompt.py",
+    ".env",
+    "setup.py",
+    "app.py",
     "store_index.py",
     "static/.gitkeep",
-    "templates/chat.py",
+    "templates/chat.html"
+
 ]
 
 for filepath in list_of_files:
